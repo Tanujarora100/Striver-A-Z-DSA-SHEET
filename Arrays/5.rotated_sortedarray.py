@@ -34,3 +34,15 @@ def arraySortedOrNot(self, arr, n):
             count = count+1
     return count < 1
 # Count should always be less than 1
+
+    '''
+    3,4,5,1,2,3,4,5,1,2
+    1,2,3,4,5 present hai isme
+    sorted agar present hai in unsorted+unsorted--> return true
+    '''
+
+
+def check(self, nums: List[int]) -> bool:
+    res = '_'.join(str(c) for c in sorted(nums))+'_'
+    res2 = '_'.join(str(c) for c in nums) + '_'
+    return res in res2 + res2
