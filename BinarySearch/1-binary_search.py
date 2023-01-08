@@ -7,7 +7,7 @@ class Solution:
             if arr[mid] == k:
                 return mid
             elif arr[mid] < k:
-                start = start+1
+                start = mid+1
             else:
-                end = end-1
+                end = mid-1
         return -1
